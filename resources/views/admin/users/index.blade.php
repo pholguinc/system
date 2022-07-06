@@ -3,9 +3,9 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Usuarios</h1>
 @stop
 
 @section('content')
-@livewire('student-index')
+    @livewire('user-index')
 @endsection

@@ -237,87 +237,124 @@ return [
         ],
 
         // Sidebar items:
+        ['header' => 'AMINISTRACIÓN'],
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Dashboard',
+            'url'  => 'admin.home',
+            'icon' => 'fas fa-fw fa-tachometer-alt',
         ],
+
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Módulos',
+            'icon'    => 'fas fa-fw fa-plus-circle',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Usuarios',
+                    'url'  => 'users.index',
+                    'icon' => 'fas fa-fw fa-users'
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Cursos',
+                    'url'  => 'courses.index',
+                    'icon' => 'fas fa-fw fa-book',
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Semestre',
+                    'url'  => 'semesters.index',
+                    'icon' => 'fas fa-fw fa-calendar-alt',
                 ],
             ],
         ],
-        ['header' => 'labels'],
+
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text' => 'Reportes',
+            'url'  => 'reports.index',
+            'icon' => 'fas fa-fw fa-chart-line',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Roles y Permisos',
+            'url'  => 'admin.roles.index',
+            'icon' => 'fas fa-fw fa-user-lock',
+        ],
+
+
+        ['header' => 'USUARIOS'],
+
+        [
+            'text'    => 'Registros',
+            'icon'    => 'fas fa-fw fa-folder-plus',
+            'submenu' => [
+                [
+                    'text' => 'Matrícula de Alumnos',
+                    'url'  => 'student.index',
+                    'icon' => 'fas fa-fw fa-user-plus',
+                ],
+                [
+                    'text' => 'Registrar Docente',
+                    'url'  => 'teachers.index',
+                    'icon' => 'fas fa-fw fa-chalkboard-teacher',
+                ],
+            ],
+        ],
+
+        [
+            'text'    => 'Operaciones',
+            'icon'    => 'fas fa-fw fa-cash-register',
+            'can' => 'admin.home',
+            'submenu' => [
+                [
+                    'text' => 'Pagos',
+                    'url'  => 'teachers.index',
+                    'icon' => 'fas fa-fw fa-money-check',
+                ],
+            ],
+        ],
+
+
+        ['header' => 'MAESTROS'],
+        [
+            'text' => 'Asistencia de Alumnos',
+            'url'  => 'student.attendance.index',
+            'icon' => 'fas fa-fw fa-graduation-cap',
+        ],
+
+        [
+            'text' => 'Notas',
+            'url'  => 'notes.index',
+            'icon' => 'fas fa-fw fa-signature',
+        ],
+        ['header' => 'ALUMNOS'],
+        [
+            'text' => 'Mi asistencia',
+            'url'  => 'student.attendance.index',
+            'icon' => 'fas fa-fw fa-list-alt',
         ],
         [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Mis Notas',
+            'url'  => 'student.notes.index',
+            'icon' => 'fas fa-fw fa-file-signature',
         ],
+
+        ['header' => 'CONFIGURACIÓN'],
+
+        [
+            'text' => 'Mi perfil',
+            'url'  => 'settings.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
+        [
+            'text' => 'Sistema',
+            'url'  => 'system.index',
+            'icon' => 'fas fa-fw fa-cogs',
+        ],
+
+        [
+            'text'    => 'Base de Datos',
+            'url'  => 'system.index',
+            'icon'    => 'fas fa-fw fa-database',
+        ],
+
     ],
 
     /*
@@ -356,7 +393,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -472,5 +509,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];

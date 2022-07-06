@@ -10,7 +10,7 @@ class Level extends Model
 {
     use HasFactory;
 
-    public function students(){
-        return $this->belongsTo(Student::class);
+    public function student(){
+        return $this->belongsTo(Student::class, 'student_id');
     }
 }

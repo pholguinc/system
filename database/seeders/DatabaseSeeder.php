@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(LevelSeeder::class);
         Student::factory(100)->create();
+        $this->call(UserSeeder::class);
     }
 }

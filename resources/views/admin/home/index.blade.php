@@ -27,8 +27,12 @@
 
             <div class="small-box bg-success">
                 <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
-                    <p>Bounce Rate</p>
+                    @php
+                        use App\Models\Student;
+                        $cant_students = Student::count();
+                    @endphp
+                    <h3>{{ $cant_students }}</h3>
+                    <p>Alumnos</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
