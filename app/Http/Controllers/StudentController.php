@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Level;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 /**
  * Class StudentController
@@ -79,6 +80,7 @@ class StudentController extends Controller
         $levels = Level::pluck('name', 'id');
 
         return view('admin.students.edit', compact('student', 'levels'));
+
     }
 
     /**
@@ -94,8 +96,7 @@ class StudentController extends Controller
 
         $student->update($request->all());
 
-        return redirect()->route('admin.students.index')
-            ->with('success', 'Student updated successfully');
+        return redirect()->route('admin.students.index');
     }
 
     /**

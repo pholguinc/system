@@ -63,12 +63,11 @@
             <div class="form-group col-md-4">
 
                 {{ Form::label('Grado Académico') }}
-                {{  Form::select('level_id', $levels, null, ['class' => 'form-control' . ($errors->has('level_id') ? ' is-invalid' : ''), 'placeholder' => 'Level Id'])  }}
+                {{ Form::select('level_id', $levels, null, ['class' => 'form-control' . ($errors->has('level_id') ? ' is-invalid' : ''), 'placeholder' => 'Level Id']) }}
                 {!! $errors->first('level_id', '<div class="invalid-feedback">:message</div>') !!}
 
             </div>
         </div>
 
     </div>
-
 

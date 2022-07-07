@@ -18,7 +18,8 @@
                         <span class="card-title">Update Student</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('admin.students.update', $student->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('admin.students.update', $student->id) }}" role="form"
+                            enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
