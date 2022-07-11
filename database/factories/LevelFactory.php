@@ -2,21 +2,18 @@
 
 namespace Database\Factories;
 
+use App\Models\Level;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class LevelFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
+    protected $model = Level::class;
+
     public function definition()
     {
         return [
-
-            'name' => $this->faker->name(),
-
+			'name' => $this->faker->name,
         ];
     }
 }

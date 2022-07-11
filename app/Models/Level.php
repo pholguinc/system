@@ -4,13 +4,30 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Level extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    public function student(){
-        return $this->belongsTo(Student::class, 'student_id');
+    public $timestamps = true;
+
+    protected $table = 'levels';
+
+    protected $fillable = ['name'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function students()
+    {
+        return $this->belongsTo('App\Models\Student', 'student_id');
     }
+
+
+    public function courses(){
+
+        return $this->belongsTo('App\Models\Course', 'course_id');
+
+    }
+
 }

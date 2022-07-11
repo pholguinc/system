@@ -7,38 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    static $rules = [
-		'code' => 'required',
-		'first_name' => 'required',
-		'last_name' => 'required',
-		'dni' => 'required',
-		'email' => 'required',
-		'address' => 'required',
-		'birthday' => 'required',
-		'parents_name' => 'required',
-		'phone_home' => 'required',
-		'phone_parent' => 'required',
-    ];
+    public $timestamps = true;
 
-    protected $perPage = 20;
+    protected $table = 'students';
 
-    /**
-     * Attributes that should be mass-assignable.
-     *
-     * @var array
-     */
-    protected $fillable = ['code','first_name','last_name','dni','email','address','birthday','parents_name','phone_home','phone_parent','status','level_id'];
-
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function levels()
     {
-        return $this->hasOne(Level::class, 'id', 'level_id');
+        return $this->hasOne('App\Models\Level', 'id', 'level_id');
     }
-
 
 }

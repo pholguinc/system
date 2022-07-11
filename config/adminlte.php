@@ -249,18 +249,28 @@ return [
             'icon'    => 'fas fa-fw fa-plus-circle',
             'submenu' => [
                 [
-                    'text' => 'Usuarios',
-                    'url'  => 'users.index',
+                    'text' => 'Empleados',
+                    'url'  => 'users',
                     'icon' => 'fas fa-fw fa-users'
                 ],
                 [
+                    'text' => 'Docentes',
+                    'url'  => 'teachers',
+                    'icon' => 'fas fa-fw fa-chalkboard-teacher',
+                ],
+                [
+                    'text' => 'Alumnos',
+                    'url'  => 'students',
+                    'icon' => 'fas fa-fw fa-user-plus',
+                ],
+                [
                     'text' => 'Cursos',
-                    'url'  => 'courses.index',
+                    'url'  => 'courses',
                     'icon' => 'fas fa-fw fa-book',
                 ],
                 [
                     'text' => 'Semestre',
-                    'url'  => 'semesters.index',
+                    'url'  => 'semesters',
                     'icon' => 'fas fa-fw fa-calendar-alt',
                 ],
             ],

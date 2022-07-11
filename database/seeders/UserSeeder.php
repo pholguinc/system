@@ -20,11 +20,11 @@ class UserSeeder extends Seeder
             'last_name' => 'Holguín',
             'email' => 'holguinpedro90@gmail.com',
             'dni' => '73317273',
-            'password' => bcrypt('12345'),
             'phone'=> '123456789',
             'address' => 'Jr. una dirección',
             'birthday' => '1998-09-02',
-            'status' => 'Activo'
+            'status' => 'Activo',
+            'password' => bcrypt('12345'),
             ]);
 
         User::factory(99)->create();

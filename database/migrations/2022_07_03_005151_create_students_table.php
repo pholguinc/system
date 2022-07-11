@@ -23,8 +23,7 @@ class CreateStudentsTable extends Migration
             $table->string('address');
             $table->string('birthday');
             $table->string('parents_name');
-            $table->string('phone_home');
-            $table->string('phone_parent');
+            $table->string('phone');
             $table->enum('status', ['Activo', 'Inactivo'])->default('Inactivo');
             $table->unsignedBigInteger('level_id')->nullable();
             $table->foreign('level_id')->references('id')->on('levels')->onDelete('set null');
