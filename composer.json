@@ -6,7 +6,10 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+<<<<<<< HEAD
         "arielmejiadev/larapex-charts": "^4.0",
+=======
+>>>>>>> a22404a3d720db1fd956ebb6ed08bd451a2da99c
         "flightsadmin/livewire-crud": "^0.0.17",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -16,7 +19,8 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.3",
-        "livewire/livewire": "^2.5"
+        "livewire/livewire": "^2.5",
+        "realrashid/sweet-alert": "^5.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
